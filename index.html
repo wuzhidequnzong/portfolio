@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- HTML5文档类型声明 -->
+<html lang="zh-CN">
+<head>
+    <!-- meta标签用于设置网页的基本信息 -->
+    <meta charset="UTF-8"> <!-- 设置网页字符编码为UTF-8，支持中文显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 响应式设计必需，确保在移动设备上正确显示 -->
+    <title>我的个人作品集</title>
+    <!-- 引入CSS文件 -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- 引入字体图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏：使用header语义化标签 -->
+    <header class="navbar">
+        <nav class="nav-container">
+            <div class="logo">我的作品集</div>
+            <!-- 导航菜单 -->
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#projects">项目</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+            <!-- 移动端菜单按钮 -->
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 首页英雄区域：展示个人简介 -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <!-- 左侧个人信息 -->
+            <div class="hero-text">
+                <h1>你的名字</h1>
+                <!-- 职业标签使用span标签和特殊类名 -->
+                <div class="tags">
+                    <span class="tag">前端开发</span>
+                    <span class="tag">UI设计</span>
+                    <span class="tag">产品设计</span>
+                </div>
+                <p class="intro">这里是你的个人简介，简单介绍你的专业背景和追求。（限100字以内）</p>
+                <!-- 行动按钮 -->
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn primary">联系我</a>
+                    <a href="#" class="btn secondary">下载简历</a>
+                </div>
+            </div>
+            <!-- 右侧头像 -->
+            <div class="hero-image">
+                <img src="images/avatar.jpg" alt="个人头像">
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示区域 -->
+    <section id="projects" class="projects-section">
+        <h2>我的项目</h2>
+        <!-- 项目筛选器 -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="frontend">前端</button>
+            <button class="filter-btn" data-filter="backend">后端</button>
+            <button class="filter-btn" data-filter="design">设计</button>
+        </div>
+        <!-- 项目网格 -->
+        <div class="projects-grid">
+            <!-- 项目卡片示例 -->
+            <div class="project-card" data-category="frontend">
+                <div class="project-image">
+                    <img src="images/project1.jpg" alt="项目1">
+                </div>
+                <div class="project-info">
+                    <h3>项目名称</h3>
+                    <p>项目简短描述，限制50字以内。</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> 源码</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> 演示</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 可以添加更多项目卡片 -->
+        </div>
+    </section>
+
+    <!-- 技能展示区域 -->
+    <section id="skills" class="skills-section">
+        <h2>专业技能</h2>
+        <div class="skills-container">
+            <!-- 前端技能 -->
+            <div class="skill-category">
+                <h3>前端开发</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                        <div class="skill-level">
+                            <div class="level-bar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <!-- 可以添加更多技能项 -->
+                </div>
+            </div>
+            <!-- 其他技能类别可以类似添加 -->
+        </div>
+    </section>
+
+    <!-- 联系方式区域 -->
+    <section id="contact" class="contact-section">
+        <h2>联系我</h2>
+        <div class="contact-container">
+            <!-- 联系表单 -->
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">邮箱</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">消息</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn primary">发送消息</button>
+            </form>
+            <!-- 社交媒体链接 -->
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <!-- 可以添加更多社交媒体链接 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>&copy; 2025 我的作品集. All rights reserved.</p>
+    </footer>
+
+    <!-- 引入JavaScript文件 -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* 响应式样式设计 */
+
+/* 移动端样式 (小于640px) */
+@media screen and (max-width: 639px) {
+    /* 导航栏适配 */
+    .nav-links {
+        display: none; /* 隐藏常规导航链接 */
+    }
+    
+    .menu-btn {
+        display: block; /* 显示菜单按钮 */
+    }
+    
+    /* 英雄区域适配 */
+    .hero-content {
+        flex-direction: column-reverse; /* 头像在上，文字在下 */
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .hero-image img {
+        width: 200px; /* 减小头像尺寸 */
+    }
+    
+    /* 项目展示适配 */
+    .projects-grid {
+        grid-template-columns: 1fr; /* 单列显示 */
+    }
+    
+    /* 技能展示适配 */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* 联系表单适配 */
+    .contact-container {
+        padding: 0 1rem;
+    }
+}
+
+/* 平板样式 (640px - 1024px) */
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+    /* 项目展示适配 */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 双列显示 */
+    }
+    
+    /* 技能展示适配 */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* 英雄区域适配 */
+    .hero-content {
+        padding: 0 2rem;
+    }
+}
+
+/* 桌面端样式 (大于1024px) */
+@media screen and (min-width: 1025px) {
+    .menu-btn {
+        display: none; /* 隐藏移动端菜单按钮 */
+    }
+    
+    /* 项目展示适配 */
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr); /* 三列显示 */
+    }
+    
+    /* 技能展示适配 */
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* 最大宽度限制 */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

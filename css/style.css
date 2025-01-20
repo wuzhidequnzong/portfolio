@@ -1,0 +1,206 @@
+/* 重置默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 使元素的内边距和边框包含在宽度和高度内 */
+}
+
+/* 设置根元素字体大小，方便使用rem单位 */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth; /* 平滑滚动效果 */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* 导航栏样式 */
+.navbar {
+    position: fixed; /* 固定在顶部 */
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* 确保导航栏始终在最上层 */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex; /* 使用Flexbox布局 */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 导航链接样式 */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem; /* 设置链接之间的间距 */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s; /* 添加颜色过渡效果 */
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* 英雄区域样式 */
+.hero-section {
+    min-height: 100vh; /* 至少占满一个屏幕高度 */
+    display: flex;
+    align-items: center;
+    padding: 6rem 2rem 2rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+/* 标签样式 */
+.tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border-radius: 2rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    margin-right: 1rem;
+}
+
+.btn.primary {
+    background: #007bff;
+    color: white;
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+/* 项目展示区域样式 */
+.projects-section {
+    padding: 4rem 2rem;
+    background: #fff;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 响应式网格布局 */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* 悬停时上移效果 */
+}
+
+/* 技能展示区域样式 */
+.skills-section {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.skill-level {
+    width: 100%;
+    height: 0.5rem;
+    background: #e9ecef;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.level-bar {
+    height: 100%;
+    background: #007bff;
+    border-radius: 1rem;
+    transition: width 0.3s;
+}
+
+/* 联系方式区域样式 */
+.contact-section {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+/* 社交媒体链接样式 */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #007bff;
+}
+
+/* 页脚样式 */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: #333;
+    color: white;
+}
