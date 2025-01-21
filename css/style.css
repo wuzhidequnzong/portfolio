@@ -128,6 +128,63 @@ body {
     transform: translateY(-5px); /* 悬停时上移效果 */
 }
 
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.project-card p {
+    padding: 0 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.tech-stack {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-stack span {
+    background: #f0f0f0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* 个人简介部分样式 */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.profile-image {
+    flex: 0 0 300px; /* 固定宽度 */
+}
+
+.profile-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* 保持图片比例 */
+    border-radius: 15px; /* 圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.profile-text {
+    flex: 1;
+}
+
 /* 技能展示区域样式 */
 .skills-section {
     padding: 4rem 2rem;
