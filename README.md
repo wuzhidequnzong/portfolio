@@ -64,6 +64,131 @@ portfolio/
 - 采用 Flexbox 和 Grid 布局
 - 移动端优先的响应式设计
 
+## Git 版本管理操作指南
+
+### 首次使用（新电脑上的配置）
+1. 配置 Git 个人信息
+```bash
+git config --global user.name "wuzhidequnzong"
+git config --global user.email "wuzhidequnzong@gmail.com"
+```
+
+2. 克隆项目
+```bash
+# 进入要存放项目的目录
+cd 你的目录路径
+
+# 克隆项目
+git clone https://github.com/wuzhidequnzong/portfolio.git
+
+# 进入项目目录
+cd portfolio
+```
+
+### 日常开发流程
+1. **开始开发前**：
+```bash
+# 获取最新代码
+git pull
+
+# 查看 README.md 了解开发进度
+# 查看 GitHub Issues 了解待办任务
+```
+
+2. **开发新功能**：
+```bash
+# 创建新功能分支（可选）
+git checkout -b feature/功能名称
+
+# 写代码...
+```
+
+3. **提交更改**：
+```bash
+# 查看改动的文件
+git status
+
+# 添加改动的文件到暂存区
+git add .
+
+# 提交更改，写清楚改动内容
+git commit -m "这里写你做了什么改动"
+
+# 推送到远程仓库
+git push
+```
+
+4. **合并功能分支（如果使用了分支）**：
+```bash
+# 切换回主分支
+git checkout main
+
+# 合并功能分支
+git merge feature/功能名称
+
+# 推送到远程
+git push
+```
+
+### 版本管理最佳实践
+1. **提交信息规范**：
+   - 用动词开头：添加、修复、优化、更新等
+   - 简明扼要地说明改动内容
+   - 一次提交只做一件事
+
+2. **何时提交代码**：
+   - 完成一个完整的功能
+   - 修复一个bug
+   - 添加新的文件
+   - 更新文档
+   - 建议经常小批量提交，避免一次提交太多改动
+
+3. **开发进度更新**：
+   - 每次开发前查看 README.md 的进度记录
+   - 开发完成后更新进度和计划
+   - 记录遇到的问题和解决方案
+
+4. **代码同步建议**：
+   - 每天开始工作前先拉取最新代码
+   - 每天结束工作前确保推送所有更改
+   - 如果遇到冲突，仔细检查后再解决
+
+### 常见问题处理
+1. **如果遇到推送冲突**：
+```bash
+# 先拉取最新代码
+git pull
+
+# 解决冲突后
+git add .
+git commit -m "解决冲突"
+git push
+```
+
+2. **如果想撤销最后一次提交**：
+```bash
+# 撤销提交但保留更改
+git reset --soft HEAD^
+
+# 撤销提交并丢弃更改（谨慎使用）
+git reset --hard HEAD^
+```
+
+3. **如果想查看历史记录**：
+```bash
+# 查看提交历史
+git log
+
+# 查看简要历史
+git log --oneline
+```
+
+### 注意事项
+- 确保 .gitignore 文件正确配置，避免提交不必要的文件
+- 不要提交敏感信息（密码、密钥等）
+- 保持提交信息清晰明了
+- 定期检查和更新开发进度记录
+
 ## 浏览器支持
 - Chrome (最新2个版本)
 - Firefox (最新2个版本)
